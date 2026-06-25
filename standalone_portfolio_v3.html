@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHOKO TSUJIMOTO PORTFOLIO</title>
+<style>
+  :root {
+    --bg: #121212;
+    --bg-alt: #18181b;
+    --text: #e4e4e7;
+    --text-muted: #a1a1aa;
+    --accent: #f27d26;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 80px 0 40px; text-align: center; border-bottom: 1px solid #27272a; }
+  header h1 { font-size: 2.5rem; letter-spacing: 0.1em; font-weight: 900; margin-bottom: 16px; }
+  header h1 span { color: var(--accent); }
+  
+  .section { padding: 100px 0; border-bottom: 1px solid #27272a; }
+  .section.bg-alt { background-color: var(--bg-alt); }
+  
+  .section-subtitle {
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+  }
+  .section-text {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    white-space: pre-wrap;
+    max-width: 800px;
+  }
+  .text-center { text-align: center; margin-left: auto; margin-right: auto; }
+  
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  
+  .img-wrapper {
+    background-color: #27272a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    aspect-ratio: 4/3;
+  }
+  .img-wrapper.hero-img { aspect-ratio: 16/9; margin-top: 60px; }
+  .img-wrapper.profile-img { aspect-ratio: 3/4; }
+  
+  .img-wrapper::before {
+    content: attr(data-alt);
+    color: #71717a;
+    font-size: 0.85rem;
+    position: absolute;
+    text-align: center;
+    padding: 1rem;
+    z-index: 0;
+    font-family: monospace;
+    white-space: pre-wrap;
+  }
+  .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    position: relative;
+    transition: transform 0.6s ease;
+  }
+  .img-wrapper:hover img { transform: scale(1.03); }
+  
+  .photo-card { display: flex; flex-direction: column; gap: 12px; margin-top: 48px; }
+  .photo-card.no-margin { margin-top: 0; }
+  .photo-title { font-weight: 700; font-size: 1rem; color: #fff; }
+  .photo-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+  
+  .story-section { background-color: #faf8f5; color: #1c1917; }
+  .story-section .section-subtitle { color: #78716c; }
+  .story-section .section-title { color: #1c1917; }
+  .story-section .section-text { color: #44403c; font-family: serif; font-size: 1.15rem; line-height: 2; }
+  .story-section .img-wrapper { background-color: #e7e5e4; }
+  .story-section .img-wrapper::before { color: #a8a29e; }
+  
+  footer { padding: 60px 0; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+  
+  @media (max-width: 768px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 40px; }
+    .section-title { font-size: 1.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>SHOKO T. <span>Portfolio</span></h1>
+    <p style="color: var(--text-muted); font-size: 0.95rem;">アスリートの俊敏な瞬発力と、最愛の父に誓った日常写真の本質を同期。</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container text-center">
+    <div class="section-subtitle">PORTFOLIO & STATEMENT</div>
+    <h2 class="section-title">かけがえのない「今」を、一生の宝物に。</h2>
+    <div class="section-text text-center">一瞬を予測する、眼。
+感情の頂点に応える、情熱。
+
+元日本リーグ・フットサル選手として、極限の『動体0.1秒』を掴み取り続けた技術は今、日常の『二度と戻らない一瞬』が一生の宝物であることを、確かなカタチとして残すために、静かに息づいています。</div>
+    <div class="img-wrapper hero-img" data-alt="ソサイチ日本代表優勝の紙吹雪&#10;(images/SHO_2535-2.jpg)">
+      <img src="images/SHO_2535-2.jpg" alt="ソサイチ日本代表優勝の紙吹雪">
+    </div>
+  </div>
+</section>
+
+<section class="section bg-alt">
+  <div class="container grid-2">
+    <div class="img-wrapper profile-img" data-alt="プロフィール写真&#10;(images/profile.jpg)">
+      <img src="images/profile.jpg" alt="プロフィール写真">
+    </div>
+    <div>
+      <div class="section-subtitle">ABOUT & VISION</div>
+      <h2 class="section-title">SHOKO TSUJIMOTO</h2>
+      <div class="section-text">■ PROFILE
+・1985年6月6日生まれ。競技歴26年。
+・女子フットサル日本リーグ等、第一線で活躍し『全日本選手権優勝・関西リーグ制覇』。
+・強み：コンマ数秒の予測力・並外れた動体視力、笑顔になる0.1秒前の予知能力。
+
+■ PHOTOGRAPHIC ESSENCE
+最愛の父を亡くした時、手元にある家族写真があまりに少ないことに気づきました。
+それがきっかけで、日常の写真が持つ『家族のかけがえのない宝物』としての本質に立ち帰りました。
+ただ記録するのではない。残された家族が、見返すたびにその愛に包まれるような、『温度』を感じる写真をスタジオから届けることが、私の人生をかけて挑む新たなステージです。</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-subtitle text-center">CORE TECHNICAL STRENGTH</div>
+    <h2 class="section-title text-center">1. 超高速における、0.1秒の「動体捕捉」</h2>
+    <div class="section-text text-center" style="margin-bottom: 48px;">■ アスリート出身にしかできない『動体の予測』
+ソサイチ日本代表の空中戦や、猛スピードで突っ込むJFLゴールキーパーの指先。
+ボールを目で追うのではなく、筋肉の踏み込みや肩の傾きから『次にボールがどこ。選手がどう飛ぶか』を半歩早く察知し、カメラを一発で構えピントを固定する。シャッタータイミングに迷いはありません。</div>
+    
+    <div class="grid-2">
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="ソサイチ日本代表オーバーヘッド&#10;(images/SHO_2092.jpg)">
+          <img src="images/SHO_2092.jpg" alt="ソサイチ日本代表オーバーヘッド">
+        </div>
+        <div class="photo-title">ソサイチ日本代表オーバーヘッド</div>
+        <div class="photo-desc">空中に美しく描かれる放物線と、背後の看板・観客。極限のダイナミズムを切り取った看板込みの完璧な水平構図。</div>
+      </div>
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="JFL F.C.大阪 GKセービング&#10;(images/SHO_1491.jpg)">
+          <img src="images/SHO_1491.jpg" alt="JFL F.C.大阪 GKセービング">
+        </div>
+        <div class="photo-title">JFL F.C.大阪 GKセービング</div>
+        <div class="photo-desc">空中へ横っ飛びするキーパー指先とボール。限界まで伸びた筋肉の臨場感あふれる肉体描写。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-alt">
+  <div class="container">
+    <div class="section-subtitle text-center">DRAMATIC MOMENT CAPTURE</div>
+    <h2 class="section-title text-center">2. 張り詰めた空気と、「歓喜」の超臨界</h2>
+    <div class="section-text text-center" style="margin-bottom: 48px;">■ 技術と、被写体の感情をシンクロさせる
+勝敗が決した瞬間。重圧から解放され、人間の感情が100%爆発する。
+選手と同じ鼓動を刻んできたからこそ、ゴールキーパーが歓喜の雄叫びを上げる瞬間を一番美しい感情のピークでフレーミングできる。極限状態の表情の中に、人間の魂のドラマを浮かび上がらせます。</div>
+    
+    <div class="grid-2">
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="GK歓喜の瞬間&#10;(images/SHO_6293.jpg)">
+          <img src="images/SHO_6293.jpg" alt="GK歓喜の瞬間">
+        </div>
+        <div class="photo-title">GK歓喜の瞬間</div>
+        <div class="photo-desc">歓喜を爆発させて叫ぶキーパーの表情、その奥にボケる歓喜の選手たち。感情の絶頂を捉えたドラマチックな一枚。</div>
+      </div>
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="Fリーグデウソン神戸高速攻防&#10;(images/IMG_1579.jpg)">
+          <img src="images/IMG_1579.jpg" alt="Fリーグデウソン神戸高速攻防">
+        </div>
+        <div class="photo-title">Fリーグデウソン神戸高速攻防</div>
+        <div class="photo-desc">フットサル特有の狭いコートで激突する選手たち。高速シャッタースピードが捉える研ぎ澄まされた表情と汗。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-subtitle text-center">OTHER SPORTS SHARPNESS</div>
+    <h2 class="section-title text-center">3. 極限における、光と「質感」の凍結</h2>
+    <div class="section-text text-center" style="margin-bottom: 48px;">■ 未経験のスピードにも即座にアジャストする空間把握力
+あらゆるスポーツへのアジャスト力は、予測困難な現場に対する究極の引き出しです。光量や被写体のスピードが異なる複雑な現場を完全にコントロールします。</div>
+    
+    <div class="grid-3">
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="アイスホッケー氷しぶき&#10;(images/IMG_2088.jpg)">
+          <img src="images/IMG_2088.jpg" alt="アイスホッケー氷しぶき">
+        </div>
+        <div class="photo-title">アイスホッケー氷しぶき</div>
+        <div class="photo-desc">激しいストップターンにより宙を舞う無数の鋭利な氷しぶき。極寒のリンクを切り裂くスピード感。</div>
+      </div>
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="スピードスケート流し撮り&#10;(images/SHO_8697.jpg)">
+          <img src="images/SHO_8697.jpg" alt="スピードスケート流し撮り">
+        </div>
+        <div class="photo-title">スピードスケート流し撮り</div>
+        <div class="photo-desc">被写体の頭部は極限までシャープでありながら、背景は美しい水平方向の糸を引くスピードスケート流し撮り。</div>
+      </div>
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="女子ラグビートライ&#10;(images/SHO_7675.jpg)">
+          <img src="images/SHO_7675.jpg" alt="女子ラグビートライ">
+        </div>
+        <div class="photo-title">女子ラグビートライ</div>
+        <div class="photo-desc">芝生に飛び込み、トライする瞬間。地を這うようなローアングルから極めて低い位置の躍動を立体的にフレーミング。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-alt">
+  <div class="container">
+    <div class="section-subtitle text-center">COMPOSITIONAL MASTERY</div>
+    <h2 class="section-title text-center">4. 設計された「前ボケ」とストーリー性</h2>
+    <div class="section-text text-center" style="margin-bottom: 48px;">■ 記録から、人の感情を動かす『作品』へのフレーミング
+ただ被写体にカメラを向けるのではない。構図によって、その写真にしか宿らないストーリーを語らせます。一人称のドラマを持たせるためのレイヤー設計を重視しています。</div>
+    
+    <div class="grid-3">
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="野球投手前ボケバット&#10;(images/SHO_0596.jpg)">
+          <img src="images/SHO_0596.jpg" alt="野球投手前ボケバット">
+        </div>
+        <div class="photo-title">野球投手前ボケバット</div>
+        <div class="photo-desc">前景にバッターボックスのバットや腕をダイナミックな前ボケとして残し、奥のマウンド上の投手にフォーカス。</div>
+      </div>
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="野球クロスプレー土煙&#10;(images/0087.jpg)">
+          <img src="images/0087.jpg" alt="野球クロスプレー土煙">
+        </div>
+        <div class="photo-title">野球クロスプレー土煙</div>
+        <div class="photo-desc">舞い上がる白煙が物語る緊迫した瞬間。土煙の奥行きから、タッチの一瞬を彫刻のように浮き彫りにする。</div>
+      </div>
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="野球外野ダイビング&#10;(images/SHO_2652.jpg)">
+          <img src="images/SHO_2652.jpg" alt="野球外野ダイビング">
+        </div>
+        <div class="photo-title">野球外野ダイビング</div>
+        <div class="photo-desc">芝生ぎりぎりの大外、全速力でダイブする外野手の指先。ボールが入るコンマ1秒前を仕留める圧倒的瞬間性。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section story-section">
+  <div class="container grid-2">
+    <div>
+      <div class="section-subtitle">MY TURNING POINT & PHILOSOPHY</div>
+      <h2 class="section-title">人生の転機。父を見送った、あの日のこと。</h2>
+      <div class="section-text">コンマ数秒の世界で、ただひたすらに自分の技術を磨き抜いてきた。
+そんななか、最愛の父を見送りました。
+
+深い悲しみの中で気づいたのは、父と共に過ごした日々を証明するような、家族揃っての写真があまりに少なかったということ。
+手元に残った数少ない写真は、どれも完璧な技術で撮られたものではありませんでした。
+けれど、そこには間違いなく『家族の温かい今』が永遠に封じ込められていた。
+
+私は、写真のもつ本当の意味を知りました。
+自分が磨き、闘い抜いてきたあらゆる技術は、この『二度と戻らないかけがえのない日常の一瞬』を、ご家族や大切な人と過ごす一生の宝物として未来へ繋ぐためにあったのではないかと。</div>
+    </div>
+    <div class="img-wrapper profile-img" data-alt="桜と姫路城&#10;(images/SHO_6079.jpg)">
+      <img src="images/SHO_6079.jpg" alt="桜と姫路城">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-subtitle text-center">APPLYING ATHLETE FOCUS</div>
+    <h2 class="section-title text-center">ファミリーを捉える「動体視力×予測力」</h2>
+    <div class="section-text text-center" style="margin-bottom: 48px;">■ 『予測不可能』な子供こそ、私の真骨頂である
+子供たちが右に走るか、おもちゃを投げるか、ハジける笑顔を爆発させるか。
+私はラグビーやフットサルを撮るのと同じように、子供たちの視線、体重移動、次の動きを0.1秒前に感じ取ります。動き回りブレやすい子供たちを常に最高にシャープに、豊かな笑顔を切り出します。</div>
+    
+    <div class="grid-3">
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="イチゴ食べる女の子アップ&#10;(images/SHO_6333.jpg)">
+          <img src="images/SHO_6333.jpg" alt="イチゴ食べる女の子アップ">
+        </div>
+        <div class="photo-title">イチゴ食べる女の子アップ</div>
+        <div class="photo-desc">甘酸っぱいイチゴを前に、目を丸くして今にも美味しさがハジけそうな子供の生き生きしたクローズアップ。</div>
+      </div>
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="笑顔で走る子ども二人&#10;(images/SHO_6572.jpg)">
+          <img src="images/SHO_6572.jpg" alt="笑顔で走る子ども二人">
+        </div>
+        <div class="photo-title">笑顔で走る子ども二人</div>
+        <div class="photo-desc">新緑の木漏れ日の中、全速力で駆け抜ける二人の子供。手ブレ・ピンボケが頻出する動きを極めて繊細に描写。</div>
+      </div>
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="おもちゃカメラ構える男の子&#10;(images/SHO_6359.jpg)">
+          <img src="images/SHO_6359.jpg" alt="おもちゃカメラ構える男の子">
+        </div>
+        <div class="photo-title">おもちゃカメラ構える男の子</div>
+        <div class="photo-desc">おもちゃカメラをしっかりと構え、こちらにレンズを向ける。子供の目線まで完全に視点を落としたフレーミング。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-alt">
+  <div class="container">
+    <div class="section-subtitle text-center">CINEMATIC KIDS STORY</div>
+    <h2 class="section-title text-center">日常に「奥行き」とシネマティックを</h2>
+    <div class="section-text text-center" style="margin-bottom: 48px;">■ 単なるこどもの『置き写真』から『ドラマチックなドキュメント』へ
+誰にでも撮れる写真ではなく、ご家庭のアルバムで10年後に最も愛され、飾られ続ける、物語ある瞬間を描き出します。</div>
+    
+    <div class="grid-2">
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="奥行きのある道を走る子ども&#10;(images/SHO_6564.jpg)">
+          <img src="images/SHO_6564.jpg" alt="奥行きのある道を走る子ども">
+        </div>
+        <div class="photo-title">奥行きのある道を走る子ども</div>
+        <div class="photo-desc">1点消失点の奥行き。はるか中央、カメラに向かってかけてくる小さな子供。周辺の背景を広く見せたシネマティック構図。</div>
+      </div>
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="サングラスかける仕草&#10;(images/SHO_6573.jpg)">
+          <img src="images/SHO_6573.jpg" alt="サングラスかける仕草">
+        </div>
+        <div class="photo-title">サングラスかける仕草</div>
+        <div class="photo-desc">少し大きすぎる大人のサングラスをずらし、いたずらっぽく覗き込んでくる微笑ましい子供の何気ない仕草。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-subtitle text-center">COMMERCIAL & LIGHTING MAESTRO</div>
+    <h2 class="section-title text-center">光を操る表現力と、多領域への対応力</h2>
+    <div class="section-text text-center" style="margin-bottom: 48px;">■ さらなる可能性：あらゆる依頼テーマを最高の完成度で
+これらすべての経験は、撮影ジャンルの幅広さではなく、私の確固たるアジャスト力の証明です。</div>
+    
+    <div class="grid-3">
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="新緑と振袖ポートレート&#10;(images/SHO_3708.jpg)">
+          <img src="images/SHO_3708.jpg" alt="新緑と振袖ポートレート">
+        </div>
+        <div class="photo-title">新緑と振袖ポートレート</div>
+        <div class="photo-desc">新緑がキラキラとボケる背景のなか、鮮やかで格式高い振袖を纏った女性のポートレート。完璧な質感描写。</div>
+      </div>
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="クラブイベントのラッパー&#10;(images/SHO_6606.jpg)">
+          <img src="images/SHO_6606.jpg" alt="クラブイベントのラッパー">
+        </div>
+        <div class="photo-title">クラブイベントのラッパー</div>
+        <div class="photo-desc">スポットライトを全身に浴びて輝きを放つ。低輝度かつ色光が強烈に入れ替わる商業イベント現場でのロックオン。</div>
+      </div>
+      <div class="photo-card no-margin">
+        <div class="img-wrapper" data-alt="ネモフィラと蜂マクロ&#10;(images/SHO_8968.jpg)">
+          <img src="images/SHO_8968.jpg" alt="ネモフィラと蜂マクロ">
+        </div>
+        <div class="photo-title">ネモフィラと蜂マクロ</div>
+        <div class="photo-desc">小さな一輪の花に、今まさに止まろうと静止（ホバリング）する蜂。羽の透明な脈絡までを完全シャープに固定。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-alt">
+  <div class="container text-center">
+    <div class="section-subtitle">THANK YOU FOR WATCHING</div>
+    <h2 class="section-title">私から見た、あなただけのかけがえのない景色がある。</h2>
+    <div class="section-text text-center">選手としてピッチを見つめてきた眼は、
+これからは、お一人おひとりの、大切な方々との愛に溢れる一瞬を見つめ続けます。
+
+私から見た、あなただけの空気感や温度感。
+その無邪気な素の姿も、光り輝く風景も、すべてを大切な瞬間として。
+
+SHOKO TSUJIMOTO の視点とハートを、ぜひ貴社のチームで、試してください。
+
+ご面談の機会をいただけますことを、心より楽しみにしております。
+
+SHOKO TSUJIMOTO
+photographer.shochin16@gmail.com</div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 SHOKO TSUJIMOTO. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      img.addEventListener('error', function() {
+        this.style.display = 'none';
+      });
+      if (img.complete && img.naturalHeight === 0) {
+        img.style.display = 'none';
+      }
+    });
+  });
+</script>
+</body>
+</html>
